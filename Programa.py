@@ -29,3 +29,6 @@ class Estudiante(db.Model):
     def __init__(self, nombre, codigo):
         self.nombre=nombre
         self.codigo=codigo
+
+with app.app_context():
+    db.create_all()
