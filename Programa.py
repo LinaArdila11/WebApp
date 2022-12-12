@@ -32,10 +32,10 @@ class Estudiante(db.Model):
 
 @app.route('/')
 def bienvenida():
-    return render_template("bienvenida.html", Estudiante.query.all())
+    return render_template("bienvenida.html")
 
 with app.app_context():
 
     db.create_all()
     app.run(debug=True)
-    
+
